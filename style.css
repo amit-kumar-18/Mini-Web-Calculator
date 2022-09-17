@@ -1,0 +1,173 @@
+@import url(https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap);
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  transition: 0.3s background-color ease-in-out;
+}
+
+/* dark mode */
+:root {
+  --primary-body-color: rgb(39, 37, 37);
+  --secondary--body-color: hsl(0, 0%, 100%);
+  --primary-output-color: hsl(0, 0%, 8%);
+  --secondary--output-color: #fff;
+  --output-screen-color: hsl(0, 0%, 8%);
+}
+
+/* light mode */
+:root.active {
+  --primary-body-color: hsl(0, 0%, 95%);
+  --secondary--body-color: rgb(39, 37, 37);
+  --primary-output-color: hsl(0, 0%, 95%);
+  --secondary--output--color: #000;
+  --output-screen-color: #dee4e7;
+}
+
+body {
+  display: flex;
+  min-height: 100vh;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  color: var(--secondary--body-color);
+  font-family: 'Poppins', 'sans-serif';
+  background-color: var(--primary-body-color);
+  transition: 0.3s background-color ease-in-out;
+}
+
+header {
+  font-size: 3rem;
+  color: var(--secondary--body--color);
+}
+
+nav {
+  margin-bottom: 1.5rem;
+}
+
+.container {
+  width: 320px;
+  min-height: 550px;
+  border-radius: 50px;
+  background-color: var(--primary-output-color);
+  border: 2px solid var(--secondary--body-color);
+}
+
+.container .output {
+  width: 100%;
+  padding: 1rem;
+  font-size: 4rem;
+  min-height: 200px;
+  position: relative;
+  word-wrap: break-word;
+  margin-bottom: 0.5rem;
+  border-radius: 50px 50px 30px 30px;
+  background-color: var(--output-screen-color);
+}
+
+.container .input {
+  width: 100%;
+  padding: 5px;
+  margin-bottom: 1rem;
+  display: grid;
+  row-gap: 10px;
+  column-gap: 5px;
+  grid-template-rows: repeat(5, 65px);
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.container .input button {
+  display: flex;
+  cursor: pointer;
+  font-size: 2.5rem;
+  align-items: center;
+  border-radius: 50px;
+  justify-content: center;
+  border: transparent;
+  color: var(--secondary--output-color);
+}
+
+.container .input .clear-all {
+  grid-column-start: 1;
+  grid-column-end: 3;
+}
+
+.container .input button.numbers {
+  background-color: rgb(59, 58, 58);
+}
+
+.container .input button.orange {
+  background-color: orange;
+}
+
+.container .input button.lightgrey {
+  background-color: grey;
+  color: #000;
+}
+
+.container .input button.back {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+/* theme toggle bar */
+.theme-switch-wrapper {
+  display: flex;
+  align-items: center;
+  margin-top: 0.5rem;
+}
+
+.theme-switch-wrapper em {
+  margin-left: 10px;
+  font-size: 1rem;
+}
+
+.theme-switch {
+  display: inline-block;
+  height: 34px;
+  width: 60px;
+  position: relative;
+}
+
+.theme-switch input {
+  display: none;
+}
+
+.slider {
+  background-color: #ccc;
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  transition: 0.4s;
+}
+
+.slider::before {
+  content: '';
+  position: absolute;
+  left: 4px;
+  bottom: 4px;
+  width: 26px;
+  height: 26px;
+  transition: 0.4s;
+  background-color: #fff;
+}
+
+input:checked + .slider {
+  background-color: #66bb6a;
+}
+
+input:checked + .slider::before {
+  transform: translateX(26px);
+}
+
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round::before {
+  border-radius: 50%;
+}

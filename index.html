@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculator</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+      integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <script src="/script.js" defer></script>
+  </head>
+  <body>
+    <header>Calculator</header>
+    <nav>
+      <div class="theme-switch-wrapper">
+        <label for="checkbox" class="theme-switch">
+          <input type="checkbox" id="checkbox" checked />
+          <div class="slider round"></div>
+        </label>
+        <em>Enable Dark Mode!</em>
+      </div>
+    </nav>
+    <main class="container">
+      <div class="output"></div>
+      <div class="input">
+        <button class="clear-all lightgrey">AC</button>
+        <button class="operator lightgrey">%</button>
+        <button class="operator orange">/</button>
+        <button class="numbers">7</button>
+        <button class="numbers">8</button>
+        <button class="numbers">9</button>
+        <button class="operator orange">*</button>
+        <button class="numbers">4</button>
+        <button class="numbers">5</button>
+        <button class="numbers">6</button>
+        <button class="operator orange">-</button>
+        <button class="numbers">1</button>
+        <button class="numbers">2</button>
+        <button class="numbers">3</button>
+        <button class="operator orange">+</button>
+        <button class="numbers">0</button>
+        <button class="numbers">.</button>
+        <button class="numbers fa-solid fa-delete-left" id="clear"></button>
+        <button class="result orange">=</button>
+      </div>
+    </main>
+  </body>
+</html>
